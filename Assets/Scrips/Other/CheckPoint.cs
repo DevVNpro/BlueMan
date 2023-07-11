@@ -35,7 +35,6 @@ public class CheckPoint : MonoBehaviour
     protected virtual void NextLevel()
     {
         ScenesManager.Instance.NextLevel();
-        //SoundManager.Instance.PlayThemeMusic("BackgroundMusic2");
 
     }
 

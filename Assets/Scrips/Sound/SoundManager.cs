@@ -14,7 +14,7 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-            SoundManager.instance = this;
+        SoundManager.instance = this;
         DontDestroyOnLoad(gameObject);
         this.BackgroundMusic();
     }

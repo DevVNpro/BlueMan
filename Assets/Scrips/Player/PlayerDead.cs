@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Death : MonoBehaviour
+public class PlayerDead : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody2D rid;
@@ -26,7 +26,7 @@ public class Death : MonoBehaviour
         rid.bodyType = RigidbodyType2D.Static;
     }
     //Animation Event 
-    private void ReloadScene()
+    protected void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
