@@ -8,12 +8,12 @@ public class AISensor : MonoBehaviour
     public LayerMask layerGround;
     public LayerMask layerPlayer;
 
-    public static int changeDiriction;
+    public  int changeDiriction;
     public bool playerInArea;
 
     public Color GizmosNoTarget = Color.red;
     public Color GizmosTarget = Color.green;
-
+    public float distanceRay;
 
     private void Start() 
     {
@@ -29,13 +29,10 @@ public class AISensor : MonoBehaviour
         CheckAttack();
 
 
-
-      
-
     }
     public void CheckMove()
     {
-        if (Physics2D.Raycast(transform.position, Vector2.right * changeDiriction, .8f, layerGround))
+        if (Physics2D.Raycast(transform.position, Vector2.right * changeDiriction, distanceRay, layerGround))
         {
             if (changeDiriction == -1)
             {
@@ -47,7 +44,7 @@ public class AISensor : MonoBehaviour
                 changeDiriction = -1;
 
             }
-            Debug.DrawRay(transform.position, Vector2.right * .8f * changeDiriction, Color.green);
+            Debug.DrawRay(transform.position, changeDiriction * distanceRay * Vector2.right, Color.green);
             transform.localScale = new Vector3(tranformLocalScal.x * changeDiriction, tranformLocalScal.y, tranformLocalScal.z);
 
 
@@ -55,7 +52,7 @@ public class AISensor : MonoBehaviour
         else
         {
 
-            Debug.DrawRay(transform.position, Vector2.right * .8f * changeDiriction, Color.red);
+            Debug.DrawRay(transform.position, changeDiriction * distanceRay * Vector2.right, Color.red);
         }
 
     }

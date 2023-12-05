@@ -6,8 +6,11 @@ public class AIBrain : MonoBehaviour
 {
     // Start is called before the first frame update
     Rigidbody2D rigidbody;
+    AISensor aISensor;
+    public float speed;
     void Start()
     {
+        aISensor = transform.GetComponent<AISensor>();
         rigidbody = transform.GetComponent<Rigidbody2D>();
     }
 
@@ -15,7 +18,8 @@ public class AIBrain : MonoBehaviour
     void Update()
     {
 
-        Vector2 newPos = new Vector2(5 * AISensor.changeDiriction, rigidbody.position.y);
+        Vector2 newPos = new Vector2(speed * aISensor.changeDiriction, rigidbody.position.y);
         rigidbody.velocity = newPos;
     }
+ 
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cherry
   - Trap
+  - Player_Leg
   layers:
   - Default
   - TransparentFX
