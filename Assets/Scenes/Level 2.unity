@@ -583,32 +583,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4012145478777246054, guid: b3e3d95b77c583749b547297e5f18e50, type: 3}
   m_PrefabInstance: {fileID: 59673071}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &61749707 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8200183756601354369, guid: 93680a13d31771249821c6252fa21ee2, type: 3}
-  m_PrefabInstance: {fileID: 1828451420}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &61749708 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8200183756601354370, guid: 93680a13d31771249821c6252fa21ee2, type: 3}
   m_PrefabInstance: {fileID: 1828451420}
   m_PrefabAsset: {fileID: 0}
---- !u!58 &61749709
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 61749707}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.009941101, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.9787483
 --- !u!1001 &66445499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -857,7 +836,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -95592305
-  m_SortingLayer: -1
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -77841,7 +77820,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 460135267
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -102272,10 +102251,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8200183756601354371, guid: 93680a13d31771249821c6252fa21ee2, type: 3}
-      propertyPath: saw
-      value: 
-      objectReference: {fileID: 61749708}
     - target: {fileID: 8200183756601354380, guid: 93680a13d31771249821c6252fa21ee2, type: 3}
       propertyPath: waypoint.Array.data[0]
       value: 

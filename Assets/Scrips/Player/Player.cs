@@ -5,16 +5,14 @@ public class Player : MonoBehaviour
 {
     private Rigidbody2D rg2d;
     private Animator animaton;
-    private SpriteRenderer Spid;
-    private BoxCollider2D coll;
+    private CapsuleCollider2D coll;
     [SerializeField] private LayerMask jumpableGround;
 
     void Start()
     {
         rg2d =GetComponent<Rigidbody2D>();
         animaton = GetComponent<Animator>();
-        Spid = GetComponent<SpriteRenderer>();
-        coll = GetComponent<BoxCollider2D>();
+        coll = GetComponent<CapsuleCollider2D>();
     }
     public float speed = 5f;
     private float X = 0;
@@ -27,7 +25,7 @@ void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
-            SoundManager.Instance.PlayVFXMusic("Jumping");
+        //    SoundManager.Instance.PlayVFXMusic("Jumping");
             rg2d.velocity = new Vector3(0, 20, 0);
         }
         
@@ -42,23 +40,23 @@ void Update()
         if (X > 0f)
         {
             state = MovermentState.running;
-            Spid.flipX = false;
+            transform.localScale = new Vector3(1f, 1f, 1f);
         }
         else if (X < 0f)
         {
             state = MovermentState.running;
-            Spid.flipX = true;
+            transform.localScale = new Vector3(-1f, 1f, 1f);
         }
         else
         {
             state = MovermentState.idle;
         }
        
-       if(rg2d.velocity.y > .1f)
+       if(rg2d.velocity.y > .5f)
         {
             state = MovermentState.jumping;
         }
-       else if(rg2d.velocity.y < -.1f) {
+       else if(rg2d.velocity.y < -.5f) {
             state = MovermentState.falling;
         }
         animaton.SetInteger("state", ((int)state));
