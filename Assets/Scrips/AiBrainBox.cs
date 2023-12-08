@@ -44,4 +44,5 @@ public class AiBrainBox : MonoBehaviour
         canMove = true;
 
     }
+
 }
