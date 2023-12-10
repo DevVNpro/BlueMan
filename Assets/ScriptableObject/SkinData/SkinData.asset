@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08743c73bbd20fa42b5488829800dcb3, type: 3}
+  m_Name: SkinData
+  m_EditorClassIdentifier: 
+  skinDatas:
+  - typeSkin: 0
+    skin: {fileID: 4572852412750620579, guid: 38f7ea7bdc5afcc469b507f4224ffc1d, type: 3}
+    Name: BlueMan
+    Price: 200
+  - typeSkin: 1
+    skin: {fileID: 8086948343373473069, guid: 913e8317a5e36184baf65c429fd15a11, type: 3}
+    Name: PinkMan
+    Price: 500
