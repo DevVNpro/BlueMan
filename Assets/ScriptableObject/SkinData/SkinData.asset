@@ -17,7 +17,14 @@ MonoBehaviour:
     skin: {fileID: 4572852412750620579, guid: 38f7ea7bdc5afcc469b507f4224ffc1d, type: 3}
     Name: BlueMan
     Price: 200
+    Id: 0
   - typeSkin: 1
     skin: {fileID: 8086948343373473069, guid: 913e8317a5e36184baf65c429fd15a11, type: 3}
     Name: PinkMan
     Price: 500
+    Id: 1
+  - typeSkin: 1
+    skin: {fileID: 8086948343373473069, guid: 0047a082bd237ba4dbd2a899cc222e14, type: 3}
+    Name: NinjaFrog
+    Price: 1000
+    Id: 2

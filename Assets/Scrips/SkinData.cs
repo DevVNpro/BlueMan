@@ -16,6 +16,8 @@ public class SkinInfo
     public GameObject skin;
     public string Name;
     public int Price;
+    public int Id;
+   // public RuntimeAnimatorController animator;
 }
 public enum TypeSkin
 {

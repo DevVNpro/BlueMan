@@ -2,8 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Confi : MonoBehaviour
+public class ConfigData : MonoBehaviour
 {
+    #region Coin
+    private const string coin = "CoinInGame";
+    public static int GetCurrentCoin()
+    {
+        return PlayerPrefs.GetInt(coin, 0);
+    }
+    public static void SetCoinInGame(int index)
+    {
+        PlayerPrefs.SetInt(coin, index);
+        PlayerPrefs.Save();
+    }
+
+
+    #endregion
     #region Skin
     private const string stringId = "Skin_ID";
     private static int oldSkin;
